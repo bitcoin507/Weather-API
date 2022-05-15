@@ -10,7 +10,7 @@ searchButton.addEventListener('click',searchCity);
     const queryURL = 'https://api.openweathermap.org/data/2.5/weather?q='+ city + '&appid=' + APIKey +'&units=metric';
     
     fetch(queryURL)
-    .then(response => response.text())
+    .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
