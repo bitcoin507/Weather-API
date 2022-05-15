@@ -1,0 +1,8 @@
+#weatherDisplayBox{
+    width: 1200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid blue;
+    background-color: aliceblue;
+}
