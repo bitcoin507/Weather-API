@@ -11,13 +11,30 @@ searchButton.addEventListener('click',searchCity);
     
     fetch(queryURL)
     .then(response => response.json())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+    .then(showWeather())
 
-  }
+    }
+
+    
+   // .then(data => console.log(data))
+    //.catch(error => console.log('error', error));
+    function showWeather() {
+      const weatherDisplayBox = document.getElementById('weatherDisplayBox');
+
+      function createWeatherElement(){
+    
+        const weatherConditionElement = document.createElement('p');
+        weatherConditionElement.innerText = `Weather Condition: ${weatherConditions[1]}`;
+        weatherDisplayBox.append(weatherConditionElement);
+      }
+    };
 
 
+  
 
-const weatherDisplayBox = document.getElementById('weatherDisplayBox');
+
+  
+
+
 
 
