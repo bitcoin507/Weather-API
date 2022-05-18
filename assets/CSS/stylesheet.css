@@ -6,3 +6,14 @@
     border: 1px solid blue;
     background-color: aliceblue;
 }
+
+img {
+    display: none;
+}
+
+
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
