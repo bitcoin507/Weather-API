@@ -1,14 +1,73 @@
 const APIKey = 'd69762104d76621b9eda338e1a084d6a';
 
 const searchButton = document.getElementById('searchButton');
-searchButton.addEventListener('click',searchCity);
+//searchButton.addEventListener('click',searchCity);
 
-  function searchCity() {
+
+
+
+
+
+
+
+
+searchButton.addEventListener('click',convertCityToGeoLocation);
+
+function convertCityToGeoLocation(){
+  let city = document.getElementById('myText').value;
+
+  const queryGeoLocationURL = 'http://api.openweathermap.org/geo/1.0/direct?q='+ city +'&appid='+ APIKey;
+  
+  
+  
+
+ 
+  
+  fetch(queryGeoLocationURL)
+    .then(response => response.json())
     
-    let city = document.getElementById('myText').value;
+    .then(data => showLatLong(data))
+    //.catch(error => console.log('error', error));
+
     
-    const queryURL = 'https://api.openweathermap.org/data/2.5/weather?q='+ city + '&appid=' + APIKey +'&units=metric';
     
+   
+
+}
+
+function showLatLong(data){
+   console.log(data)
+   const lat = data[0].lat;
+   const long = data[0].lon;
+   console.log(lat, long)
+   
+
+   
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*function searchCity() {
+    
+    
+    
+    
+    
+    const queryURL = 'https://api.openweathermap.org/data/2.5/onecall?lat=10006&lon=87665&exclude=minutely,hourly' + '&appid=' + APIKey + '&units=metric';
+
     fetch(queryURL)
     .then(response => response.json())
     .then(data => showWeather(data))
@@ -37,7 +96,15 @@ searchButton.addEventListener('click',searchCity);
         const windSpeed = data.wind.speed;
         const weatherIcon = data.weather[0].icon;
 
-        console.log(weatherIcon);
+         why does this function only work when clicked twice?
+        
+        const iconImage = document.querySelector('img');
+        const searchButton = document.getElementById('searchButton');
+        searchButton.addEventListener('click',showIcon);
+
+        function showIcon(){
+          img.style.display = 'block';
+        }
         
         
         
@@ -148,7 +215,7 @@ searchButton.addEventListener('click',searchCity);
 
         
       }
-    };
+    }; */
 
 
   
