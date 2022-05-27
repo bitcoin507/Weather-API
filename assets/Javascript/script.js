@@ -11,7 +11,7 @@ const searchButton = document.getElementById('searchButton');
 
 
 
-searchButton.addEventListener('click',convertCityToGeoLocation);
+/*searchButton.addEventListener('click',convertCityToGeoLocation);
 
 function convertCityToGeoLocation(){
   let city = document.getElementById('myText').value;
@@ -44,7 +44,7 @@ function showLatLong(data){
 
    
 
-}
+}*/
 
 
 
@@ -60,7 +60,7 @@ function showLatLong(data){
 
 
 
-  /*function searchCity() {
+  function searchCity() {
     
     
     
@@ -215,7 +215,7 @@ function showLatLong(data){
 
         
       }
-    }; */
+    }; 
 
 
   
