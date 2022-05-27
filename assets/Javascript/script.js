@@ -96,7 +96,7 @@ function showLatLong(data){
         const windSpeed = data.wind.speed;
         const weatherIcon = data.weather[0].icon;
 
-         why does this function only work when clicked twice?
+         /*why does this function only work when clicked twice?
         
         const iconImage = document.querySelector('img');
         const searchButton = document.getElementById('searchButton');
@@ -104,7 +104,7 @@ function showLatLong(data){
 
         function showIcon(){
           img.style.display = 'block';
-        }
+        }*/
         
         
         
