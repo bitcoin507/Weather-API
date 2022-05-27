@@ -66,7 +66,7 @@ function showLatLong(data){
     
     
     
-    const queryURL = 'https://api.openweathermap.org/data/2.5/onecall?lat=10006&lon=87665&exclude=minutely,hourly' + '&appid=' + APIKey + '&units=metric';
+    const queryURL = 'https://api.openweathermap.org/data/2.5/onecall?lat='+ lat + '&lon='+ long + '&exclude=minutely,hourly&appid=' + APIKey + '&units=metric';
 
     fetch(queryURL)
     .then(response => response.json())
