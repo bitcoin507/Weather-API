@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./assets/CSS/stylesheet.css">
 </head>
 <body>
@@ -14,10 +16,52 @@
   <input type="button" id="searchButton" value="Search">
   </form>
 
-  <div id="weatherDisplayBox" class="grid">
-    <img src="./assets/Weather Icons/unknown.png">
+  <div id="weatherDisplayBox">
+    <img id="img1" src="./assets/Weather Icons/unknown.png">
 
   </div>
+
+   <div id = "5dayWeatherBox" class="flex-container2">
+
+  <div id = "firstDayCard" class="card" style="width: 12rem;">
+    <img id="img2" class="card-img-top" src="./assets/Weather Icons/unknown.png" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+
+  <div id="secondDayCard" class="card" style="width: 12rem;">
+    <img id="img3" class="card-img-top" src="./assets/Weather Icons/unknown.png" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+
+  <div id="thirdDayCard" class="card" style="width: 12rem;">
+    <img id="img4" class="card-img-top" src="./assets/Weather Icons/unknown.png" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+
+  <div id="fourthDayCard" class="card" style="width: 12rem;">
+    <img id="img5" class="card-img-top" src="./assets/Weather Icons/unknown.png" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+
+  <div id="fithDayCard" class="card" style="width: 12rem;">
+    <img id="img6" class="card-img-top" src="./assets/Weather Icons/unknown.png" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+
+  
+
+
+</div>
 
   
 
@@ -27,5 +71,7 @@
 
   
   <script src="./assets/Javascript/script.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 </body>
 </html>
