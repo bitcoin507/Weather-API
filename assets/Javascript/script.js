@@ -8,7 +8,7 @@ searchButton.addEventListener('click', convertCityToGeoLocation);
 function convertCityToGeoLocation(){
   let city = document.getElementById('myText').value;
 
-  const queryGeoLocationURL = 'http://api.openweathermap.org/geo/1.0/direct?q='+ city +'&appid='+ APIKey;
+  const queryGeoLocationURL = 'https://api.openweathermap.org/geo/1.0/direct?q='+ city +'&appid='+ APIKey;
     
   fetch(queryGeoLocationURL)
     .then(response => response.json())
