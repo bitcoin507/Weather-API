@@ -1,12 +1,24 @@
 const APIKey = 'd69762104d76621b9eda338e1a084d6a';
 
 const searchButton = document.getElementById('searchButton');
-//searchButton.addEventListener('click', searchCity);
+
 
 searchButton.addEventListener('click', convertCityToGeoLocation);
 
+let city = document.getElementById('myText').value;
+
+
 function convertCityToGeoLocation(){
   let city = document.getElementById('myText').value;
+
+  
+
+
+ 
+  
+
+  
+
 
   const queryGeoLocationURL = 'https://api.openweathermap.org/geo/1.0/direct?q='+ city +'&appid='+ APIKey;
     
@@ -15,6 +27,8 @@ function convertCityToGeoLocation(){
     .then(data => searchCity(data))
     .catch(error => console.log('error', error));
 }
+
+
 
 
 
@@ -37,6 +51,11 @@ function searchCity(data) {
     
 }
 
+
+
+
+
+
 function showWeather(data) {
   console.log(data)
   const weatherDisplayBox = document.getElementById('weatherDisplayBox');
@@ -47,6 +66,8 @@ function showWeather(data) {
   const windSpeed = data.current.wind_speed;
   const UVIndex = data.current.uvi;
   const UNIXTimeStamp = data.current.dt;
+
+
 
 //Weather Icon
   const weatherIcon = data.current.weather[0].icon;
@@ -902,10 +923,8 @@ else if (fithDayIcon === '50n') {
 
 }
 
+searchButton.addEventListener('click',refreshPage)
 
-
-
-};
-
-
-
+function refreshPage(){
+  location.reload();
+}
